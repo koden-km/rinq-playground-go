@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/rinq/rinq-go/src/rinq"
-	"github.com/rinq/rinq-go/src/rinq/amqp"
+	"github.com/rinq/rinq-go/src/rinqamqp"
 )
 
 func main() {
@@ -17,7 +17,7 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	peer, err := amqp.DialEnv()
+	peer, err := rinqamqp.DialEnv()
 	if err != nil {
 		panic(err)
 	}
