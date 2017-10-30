@@ -22,7 +22,7 @@ func main() {
 		panic(err)
 	}
 
-	ch := make(chan os.Signal)
+	ch := make(chan os.Signal, 1)
 
 	signal.Notify(ch, os.Interrupt)
 
